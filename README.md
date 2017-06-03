@@ -1,8 +1,6 @@
 # AsyncPlay
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/async_play`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Wait for completion of the asynchronous procedure to obtain thats results.
 
 ## Installation
 
@@ -22,7 +20,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To obtain results from asynchronous procedure, the procedure is passed as a block to AsyncPlay#opening.
+The block will be given one argiment that is a Proc to return resuts.
+The end of block call the proc with results then return it from AsyncPlay#opening.
+
+
+```ruby
+results = AsyncPlay.opening{ | curtain | Thread.new { curtain.call 1 } }
+```
+
+If you do not call the proc within 1 second, AsyncPlay#opening raise an error.
 
 ## Development
 
@@ -32,4 +39,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/async_play.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ledsun/async_play.
