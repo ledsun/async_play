@@ -31,6 +31,11 @@ results = AsyncPlay.opening{ | curtain | Thread.new { curtain.call 1 } }
 
 If you do not call the proc within 1 second, AsyncPlay#opening raise an error.
 
+### Change wait time
+
+The wait time is 1 second by default.
+To change wait time, set the environment variable `ASYNC_PLAY_WAIT_TIME` in seconds.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

@@ -28,7 +28,7 @@ module AsyncPlay
     end
 
     def pop
-      pop_with_timeout 1
+      pop_with_timeout ENV['ASYNC_PLAY_WAIT_TIME']&.to_i || 1
     end
 
     private
