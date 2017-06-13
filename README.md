@@ -36,6 +36,10 @@ If you do not call the proc within 1 second, AsyncPlay#opening raise an error.
 The wait time is 1 second by default.
 To change wait time, set the environment variable `ASYNC_PLAY_WAIT_TIME` in seconds.
 
+## See also
+
+[RSpecで非同期な関数をテストする - Qiita](qiita.com/ledsun/items/0e1dd4ece43dc56653c7) (Japanese)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
