@@ -38,7 +38,7 @@ To change wait time, set the environment variable `ASYNC_PLAY_WAIT_TIME` in seco
 
 ## See also
 
-[RSpecで非同期な関数をテストする - Qiita](qiita.com/ledsun/items/0e1dd4ece43dc56653c7) (Japanese)
+[RSpecで非同期な関数をテストする - Qiita](http://qiita.com/ledsun/items/0e1dd4ece43dc56653c7) (Japanese)
 
 ## Development
 
